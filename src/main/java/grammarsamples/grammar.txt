@@ -1,0 +1,7 @@
+PROGRAM 	 ::=  NAME “:” BLOCK
+NAME		 ::= “Component” | “Grade”
+BLOCK 	     ::= “{” DATA “}”
+DATA 		 ::= “[” MARK | WEIGHT “]”
+MARK		 ::=  KEY “:” number
+WEIGHT 	     ::=  KEY “:” string “,” KEY “:” number
+KEY		     ::= “name” | “weight” | “mark”

@@ -1,0 +1,5 @@
+component: Assignment, weight: 20;
+component: Quiz      , weight: 10;
+component: Final     , weight: 70;
+
+grade:     Assignment, mark: 72;
