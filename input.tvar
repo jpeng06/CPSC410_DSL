@@ -8,3 +8,9 @@ CREATE COURSE cpsc410(
 CREATE GROUP term1(
     Name: Cpsc410;
 )
+
+COMPUTE AVG cpsc410()
+
+COMPUTE GOAL cpsc410(
+    Mark: 90;
+)

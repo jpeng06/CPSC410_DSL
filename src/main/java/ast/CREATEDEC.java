@@ -11,7 +11,6 @@ public class CREATEDEC extends STATEMENT {
 
     @Override
     public void parse() {
-
         tokenizer.getAndCheckNext("CREATE");
         if (tokenizer.checkToken("COURSE")) {
             course = new COURSE();
