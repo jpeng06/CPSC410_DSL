@@ -1,5 +1,10 @@
-component: Assignment, weight: 20;
-component: Quiz      , weight: 10;
-component: Final     , weight: 70;
+CREATE COURSE cpsc410(
+    Name: Assignment    ,  Weight: 10;
+    Name: Project       ,  Weight: 10;
+    Name: Quiz          ,  Weight: 30;
+    Name: Final         ,  Weight: 50;
+)
 
-grade:     Assignment, mark: 72;
+CREATE GROUP term1(
+    Name: Cpsc410;
+)

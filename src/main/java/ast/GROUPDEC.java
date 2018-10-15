@@ -1,30 +1,23 @@
 package ast;
 
-import ui.Main;
-
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 
-public class GRADE extends STATEMENT {
+public class GROUPDEC extends STATEMENT {
 
     String name;
-    double mark;
 
     @Override
     public void parse() {
-        tokenizer.getAndCheckNext("grade");
+        tokenizer.getAndCheckNext("Name");
         tokenizer.getAndCheckNext(":");
         name = tokenizer.getNext();
-        tokenizer.getAndCheckNext(",");
-        tokenizer.getAndCheckNext("mark");
-        tokenizer.getAndCheckNext(":");
-        mark = Double.parseDouble(tokenizer.getNext());
+        name += tokenizer.getNext();
         tokenizer.getAndCheckNext(";");
     }
 
     @Override
     public String evaluate() throws FileNotFoundException, UnsupportedEncodingException {
-        Main.symbolTable.put(name, mark);
         return null;
     }
 }

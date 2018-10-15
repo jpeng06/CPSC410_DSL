@@ -1,30 +1,33 @@
 package ast;
 
-import ui.Main;
-
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 
-public class COMPONENT extends STATEMENT {
+public class COMPONENTDEC extends STATEMENT {
 
-    String name = "";
-    double mark = 0;
-
+    String name;
+    Double weight;
+    Double grade;
     @Override
     public void parse() {
-        tokenizer.getAndCheckNext("component");
+        tokenizer.getAndCheckNext("Name");
         tokenizer.getAndCheckNext(":");
         name = tokenizer.getNext();
         tokenizer.getAndCheckNext(",");
-        tokenizer.getAndCheckNext("weight");
+        tokenizer.getAndCheckNext("Weight");
         tokenizer.getAndCheckNext(":");
-        mark = Double.parseDouble(tokenizer.getNext());
+        weight = Double.parseDouble(tokenizer.getNext());
+        if (tokenizer.checkToken("Grade")) {
+            grade = Double.parseDouble(tokenizer.getNext());
+        }
+
         tokenizer.getAndCheckNext(";");
+
     }
 
     @Override
     public String evaluate() throws FileNotFoundException, UnsupportedEncodingException {
-        // todo: Main.symbolTable.put();
         return null;
     }
 }
