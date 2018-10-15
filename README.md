@@ -6,20 +6,43 @@ Java, Maven
 
 ## Grammer (To be updated)
  
-PROGRAM 	 ::=  NAME “:” BLOCK   
-NAME		 ::= “Component” | “Grade”  
-BLOCK 	     ::= “{” DATA “}”  
-DATA 		 ::= “[” MARK | WEIGHT “]”  
-MARK		 ::=  KEY “:” number  
-WEIGHT 	     ::=  KEY “:” string “,” KEY “:” number  
-KEY		     ::= “name” | “weight” | “mark”  
+PROGRAM		:= STATEMENT* 
+STATEMENT		:= CREATEDEC | COMPUTEDEC 
+CREATEDEC		:=  “CREATE” { COURSE | GROUP } 
+COMPUTEDEC		:=  “COMPUTE” { AVG | GOAL } 
+COURSE 		:= NAME “(” COMPONENTDEC* “)” 
+GROUP	 		:= NAME “(” GROUPDEC* “)” 
+AVG	 		:= “AVG” NAME “( )” 
+GOAL	 		:= “GOAL " NAME “(” GOALDEC “)” 
+COMPONENTDEC	:= NAMEDEC “,” WEIGHTDEC ["," MARKDEC]*  “;”  
+GROUPDEC		:= NAMEDEC “;”  
+GOALDEC		:= MARKDEC “;” MARKDEC “;” 
+NAMEDEC		:= “Name” ”:” NAME 
+WEIGHTDEC		:= “Weight” “:” WEIGHT 
+MARKDEC		:= “Mark” “:” MARK 
 
 ## Example
 
-component: Assignment, weight: 20;  
-component: Quiz      , weight: 10;  
-component: Final     , weight: 70;  
-grade:     Assignment, mark: 72;  
+CREATE COURSE cpsc410(
+Name: Assignment1, weight: 8.6;
+Name: Assignment2, weight: 12;
+Name: Quiz, weight: 10;
+Name: Final, weight: 70;
+)
+
+CREATE GROUP term1(
+	Name: Cpsc410;
+)
+
+// get average for cpsc410 
+COMPUTE AVG cpsc410()
+	
+// what need to be achieved for each individual component 
+// to bring overall average to 90
+COMPUTE GOAL cpsc410 (
+mark: 90;
+)
+
 
 
 ## Convention 
