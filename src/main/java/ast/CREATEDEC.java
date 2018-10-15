@@ -20,9 +20,6 @@ public class CREATEDEC extends STATEMENT {
             group = new GROUP();
             group.parse();
         }
-
-
-
     }
 
     @Override

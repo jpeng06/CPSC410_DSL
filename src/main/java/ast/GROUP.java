@@ -1,5 +1,7 @@
 package ast;
 
+import ui.Main;
+
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -29,6 +31,9 @@ public class GROUP extends STATEMENT {
 
     @Override
     public String evaluate() throws FileNotFoundException, UnsupportedEncodingException {
+        enterScope(this.toString());
+        Main.symbolTable.put(name + "." + getScope() , groups);
+        leaveScope();
         return null;
     }
 }

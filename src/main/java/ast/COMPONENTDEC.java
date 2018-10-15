@@ -8,7 +8,7 @@ public class COMPONENTDEC extends STATEMENT {
 
     String name;
     Double weight;
-    Double grade;
+    Double grade = -1.0;
     @Override
     public void parse() {
         tokenizer.getAndCheckNext("Name");
@@ -21,7 +21,6 @@ public class COMPONENTDEC extends STATEMENT {
         if (tokenizer.checkToken("Grade")) {
             grade = Double.parseDouble(tokenizer.getNext());
         }
-
         tokenizer.getAndCheckNext(";");
 
     }
