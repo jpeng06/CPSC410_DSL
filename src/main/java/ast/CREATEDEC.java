@@ -5,7 +5,6 @@ import java.io.UnsupportedEncodingException;
 
 public class CREATEDEC extends STATEMENT {
 
-
     COURSE course;
     GROUP group;
 

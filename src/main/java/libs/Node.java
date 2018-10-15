@@ -12,7 +12,7 @@ public abstract class Node {
     static private LinkedList<String> scope = new LinkedList();
 
     abstract public void parse();
-    abstract public String evaluate() throws FileNotFoundException, UnsupportedEncodingException;
+    abstract public Object evaluate() throws FileNotFoundException, UnsupportedEncodingException;
 
     public static void enterScope(String s){
         System.out.println("Entering scope "+s);

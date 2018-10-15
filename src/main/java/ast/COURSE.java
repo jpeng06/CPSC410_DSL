@@ -32,6 +32,7 @@ public class COURSE extends STATEMENT {
     @Override
     public String evaluate() throws FileNotFoundException, UnsupportedEncodingException {
         Main.symbolTable.put(name, components);
+        Main.typeLookup.put(name, "COURSE");
         return null;
     }
 }

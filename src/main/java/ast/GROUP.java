@@ -32,8 +32,10 @@ public class GROUP extends STATEMENT {
     @Override
     public String evaluate() throws FileNotFoundException, UnsupportedEncodingException {
         enterScope(this.toString());
-        Main.symbolTable.put(name + "." + getScope() , groups);
-        leaveScope();
+        //Main.symbolTable.put(name + "." + getScope() , groups);
+        Main.symbolTable.put(name, groups);
+        //leaveScope();
+        Main.typeLookup.put(name, "GROUP");
         return null;
     }
 }

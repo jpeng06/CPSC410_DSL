@@ -1,7 +1,10 @@
 package ast;
 
+import ui.Main;
+
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 
 public class GOALDEC extends STATEMENT {
 

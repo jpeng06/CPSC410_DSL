@@ -12,6 +12,7 @@ import java.util.Map;
 
 public class Main {
     public static Map<String,Object> symbolTable = new HashMap<>();
+    public static Map<String, String> typeLookup = new HashMap<>();
 
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
         List<String> literals = Arrays.asList("CREATE", "COMPUTE", "COURSE", "GROUP", "AVG", "GOAL", "Name", "Weight", "Mark", "(", ")", ":", ",", ";");

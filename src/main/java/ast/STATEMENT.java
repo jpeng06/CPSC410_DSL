@@ -2,7 +2,7 @@ package ast;
 
 import libs.Node;
 
-public  abstract class STATEMENT extends Node {
+public abstract class STATEMENT extends Node {
     public static STATEMENT getSubStatement() {
 
         if (tokenizer.checkToken("CREATE")) {
