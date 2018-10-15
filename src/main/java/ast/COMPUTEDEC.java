@@ -22,6 +22,11 @@ public class COMPUTEDEC extends STATEMENT {
 
     @Override
     public String evaluate() throws FileNotFoundException, UnsupportedEncodingException {
+        if (avg != null) {
+            avg.evaluate();
+        } else {
+            goal.evaluate();
+        }
         return null;
     }
 }

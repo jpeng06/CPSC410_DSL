@@ -31,9 +31,7 @@ public class COURSE extends STATEMENT {
 
     @Override
     public String evaluate() throws FileNotFoundException, UnsupportedEncodingException {
-        enterScope(this.toString());
-        Main.symbolTable.put(name + "." + getScope(), components);
-        leaveScope();
+        Main.symbolTable.put(name, components);
         return null;
     }
 }

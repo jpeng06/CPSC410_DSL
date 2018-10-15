@@ -18,7 +18,10 @@ public class COMPONENTDEC extends STATEMENT {
         tokenizer.getAndCheckNext("Weight");
         tokenizer.getAndCheckNext(":");
         weight = Double.parseDouble(tokenizer.getNext());
-        if (tokenizer.checkToken("Grade")) {
+        if (tokenizer.checkToken(",")) {
+            tokenizer.getAndCheckNext(",");
+            tokenizer.getAndCheckNext("Grade");
+            tokenizer.getAndCheckNext(":");
             grade = Double.parseDouble(tokenizer.getNext());
         }
         tokenizer.getAndCheckNext(";");

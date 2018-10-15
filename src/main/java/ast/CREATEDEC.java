@@ -23,6 +23,11 @@ public class CREATEDEC extends STATEMENT {
 
     @Override
     public String evaluate() throws FileNotFoundException, UnsupportedEncodingException {
+        if (course != null) {
+            course.evaluate();
+        } else {
+            group.evaluate();
+        }
         return null;
     }
 }
