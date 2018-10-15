@@ -57,13 +57,10 @@ public class AVGDEC extends STATEMENT {
 
             Double totalAvg = 0.0;
 
-            System.out.println(totalAvg);
-
             for (GROUPDEC course : courses) {
                 AVGDEC avgCalc = new AVGDEC();
                 avgCalc.name = course.name;
                 totalAvg += avgCalc.evaluate();
-                System.out.println(totalAvg);
             }
 
             System.out.println("Your Average for " + name + " is: " + totalAvg/courses.size());
