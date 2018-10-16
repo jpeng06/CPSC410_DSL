@@ -27,6 +27,7 @@ public class PROGRAM extends Node{
             s.evaluate();
         }
         HtmlOutputter.writeToHtmlFile("</html>", true);
+        HtmlOutputter.openHtmlFile();
         return null;
     }
 
@@ -38,6 +39,7 @@ public class PROGRAM extends Node{
         sb.append("<title>My Grades</title>");
         sb.append("</head>");
         sb.append("<body>");
+        sb.append("HERE ARE ALL YOUR GRADES!");
         sb.append("</body>");
         HtmlOutputter.writeToHtmlFile(sb.toString(), false);
     }
