@@ -1,9 +1,7 @@
 package libs;
 
 
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.LinkedList;
 
 public abstract class Node {
@@ -27,5 +25,4 @@ public abstract class Node {
     public static String getGlobal(){
         return scope.getLast().toString();
     }
-
 }
