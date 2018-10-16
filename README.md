@@ -4,7 +4,7 @@ Domain Specific Language Project, CPSC 410
 ## Environment 
 Java, Maven
 
-## Grammer (To be updated)
+## Grammar (To be updated)
  
 PROGRAM		:= STATEMENT* 
 STATEMENT		:= CREATEDEC | COMPUTEDEC 
