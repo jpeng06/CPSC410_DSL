@@ -62,13 +62,13 @@ public class GOALDEC extends STATEMENT {
 
             double averageNeeded = (mark * 100 - avg) / remainingWeight;
 
-            xAxisLabels.add("Current Average" + " (" + totalWeight + "%)");
+            xAxisLabels.add("Current Average");
             barGraphValues.add(weightedAvg);
             barGraphColours.add(Colours.getNext());
             xAxisLabels.add("Target Grade");
             barGraphValues.add(mark);
             barGraphColours.add(Colours.getNext());
-            xAxisLabels.add("Required Average On Remaining Components" + " (" + remainingWeight + "%)");
+            xAxisLabels.add("Required Average On Remaining Components");
             barGraphValues.add(averageNeeded);
             barGraphColours.add("#ffc527");
 

@@ -11,7 +11,7 @@ CREATE COURSE cpsc430(
     Name: EssayTwo    ,  Weight: 2, Grade: 63;
     Name: EssayThree  ,  Weight: 4, Grade: 67;
     Name: EssayFour   ,  Weight: 8, Grade: 56;
-    Name: EssayFive   ,  Weight: 10, Grade: 89;
+    Name: EssayFive   ,  Weight: 10, Grade: 71;
     Name: Labs        ,  Weight: 25;
     Name: Final       ,  Weight: 50;
 )
@@ -23,6 +23,6 @@ CREATE GROUP term1(
 
 COMPUTE AVG term1()
 
-COMPUTE GOAL cpsc410(
+COMPUTE GOAL cpsc430(
     Mark: 85;
 )
