@@ -4,7 +4,7 @@ Domain Specific Language Project, CPSC 410
 ## Environment 
 Java, Maven
 
-## Grammar (To be updated)
+## Grammar
  
 PROGRAM		:= STATEMENT*  
 STATEMENT		:= CREATEDEC | COMPUTEDEC  
@@ -24,14 +24,14 @@ MARKDEC		:= “Mark” “:” MARK
 ## Example
 
 CREATE COURSE cpsc410(  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: AssignmentOne, Weight: 8.6, Grade: 98;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: AssignmentTwo, Weight: 12;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: Assignment, Weight: 10, Grade: 98;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: Project, Weight: 20;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: Quiz, Weight: 10;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: Final, Weight: 70;  
 )
 
 CREATE GROUP term1(  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: Cpsc410;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: cpsc410;  
 )  
 
 // get average for cpsc410   
