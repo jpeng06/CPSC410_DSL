@@ -48,7 +48,7 @@ public class AVGDEC extends STATEMENT {
                     avg += c.grade * c.weight;
                     totalWeight += c.weight;
 
-                    xAxisLabels.add(c.name);
+                    xAxisLabels.add(c.name + " (" + c.weight + "%)");
                     barGraphValues.add(c.grade);
                     barGraphColours.add(Colours.getNext());
                 }
@@ -56,7 +56,7 @@ public class AVGDEC extends STATEMENT {
 
             double weightedAvg = avg/totalWeight;
 
-            xAxisLabels.add("Average");
+            xAxisLabels.add("Weighted Average");
             barGraphValues.add(weightedAvg);
             //barGraphColours.add(Colours.getNext());
             barGraphColours.add("#ffc527");
