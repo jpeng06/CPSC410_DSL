@@ -1,10 +1,8 @@
 package libs;
 
 import java.awt.*;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.channels.FileChannel;
 
 public class HtmlOutputter {
     public static void writeToFile(String file, String s, boolean isAppendMode) {
@@ -24,6 +22,32 @@ public class HtmlOutputter {
             Desktop.getDesktop().browse(htmlFile.toURI());
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void copyFile(String sourceFilePath, String destFilePath) throws IOException {
+        File sourceFile = new File(sourceFilePath);
+        File destFile = new File(destFilePath);
+
+        if(!destFile.exists()) {
+            destFile.createNewFile();
+        }
+
+        FileChannel source = null;
+        FileChannel destination = null;
+
+        try {
+            source = new FileInputStream(sourceFile).getChannel();
+            destination = new FileOutputStream(destFile).getChannel();
+            destination.transferFrom(source, 0, source.size());
+        }
+        finally {
+            if(source != null) {
+                source.close();
+            }
+            if(destination != null) {
+                destination.close();
+            }
         }
     }
 }

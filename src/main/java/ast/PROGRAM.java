@@ -48,7 +48,6 @@ public class PROGRAM extends Node{
         sb.append("<div id=\"computeDiv\"></div>");
         sb.append("<div id=\"createDiv\"></div>");
         sb.append("<script src=\"scripts.js\"></script>");
-        sb.append("<script src=\"html5-canvas-bar-graph.js\"></script>");
         sb.append("<script src=\"vendor/jquery/jquery-3.2.1.min.js\"></script>");
         sb.append("<script src=\"vendor/bootstrap/js/popper.js\"></script>");
         sb.append("<script src=\"vendor/bootstrap/js/bootstrap.min.js\"></script>");
@@ -57,6 +56,20 @@ public class PROGRAM extends Node{
         sb.append("<script>$('.js-pscroll').each(function(){var ps = new PerfectScrollbar(this);$(window).on('resize', function(){ps.update();})});</script>");
         sb.append("<script src=\"js/main.js\"></script>");
         sb.append("</body></html>");
-        HtmlOutputter.writeToFile("mygrades.html", sb.toString(), false);
+        HtmlOutputter.writeToFile("mygrades.html", sb.toString(), true);
+//
+//        sb = new StringBuilder();
+//        sb.append("function createCanvas(divName) {\n" +
+//                "\t\t\t\n" +
+//                "\t\t\tvar div = document.getElementById(divName);\n" +
+//                "\t\t\tvar canvas = document.createElement('canvas');\n" +
+//                "\t\t\tdiv.appendChild(canvas);\n" +
+//                "\t\t\tif (typeof G_vmlCanvasManager != 'undefined') {\n" +
+//                "\t\t\t\tcanvas = G_vmlCanvasManager.initElement(canvas);\n" +
+//                "\t\t\t}\t\n" +
+//                "\t\t\tvar ctx = canvas.getContext(\"2d\");\n" +
+//                "\t\t\treturn ctx;\n" +
+//                "\t\t}\n");
+//        HtmlOutputter.writeToFile("scripts.js", sb.toString(), true);
     }
 }

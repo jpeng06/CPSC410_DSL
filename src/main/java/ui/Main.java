@@ -5,6 +5,7 @@ import libs.HtmlOutputter;
 import libs.Tokenizer;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -19,6 +20,11 @@ public class Main {
         List<String> literals = Arrays.asList("CREATE", "COMPUTE", "COURSE", "GROUP", "AVG", "GOAL", "Name", "Weight", "Mark", "(", ")", ":", ",", ";");
         Tokenizer.makeTokenizer("input.tvar",literals);
         HtmlOutputter.writeToFile("scripts.js", "", false);
+        try {
+            HtmlOutputter.copyFile("html5-canvas-bar-graph.js", "scripts.js");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         HtmlOutputter.writeToFile("mygrades.html", "", false);
         PROGRAM p = new PROGRAM();
         p.parse();

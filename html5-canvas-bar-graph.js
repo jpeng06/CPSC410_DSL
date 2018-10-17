@@ -196,3 +196,16 @@ function BarGraph(ctx) {
 	  }
 	}; 
 }
+
+function createCanvas(divName) {
+
+    var div = document.getElementById(divName);
+    var canvas = document.createElement('canvas');
+    canvas.setAttribute('class', 'graph-div');
+    div.appendChild(canvas);
+    if (typeof G_vmlCanvasManager != 'undefined') {
+        canvas = G_vmlCanvasManager.initElement(canvas);
+    }
+    var ctx = canvas.getContext("2d");
+    return ctx;
+}

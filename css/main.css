@@ -3,6 +3,8 @@
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
+h1 { font-size: 30px; letter-spacing: -1px; color: #997635; text-transform: uppercase; text-shadow: 1px 1px 0 #000, margin: 10px 0 24px; text-align: center; line-height: 50px; }
+
 
 @font-face {
   font-family: Lato-Regular;
@@ -142,7 +144,6 @@ iframe {
 
 .container-table100 {
   width: 100%;
-  min-height: 100vh;
   background: #fff;
 
   display: -webkit-box;
@@ -523,4 +524,10 @@ th, td {
 
 .table100.ver5 .ps__rail-y .ps__thumb-y::before {
   background-color: #cccccc;
+}
+
+.graph-div {
+	padding-left: 20%;
+	padding-right: 20%;
+	width: 100%;
 }
