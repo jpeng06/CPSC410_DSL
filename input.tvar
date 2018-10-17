@@ -1,16 +1,28 @@
 CREATE COURSE cpsc410(
-    Name: Assignment    ,  Weight: 10, Grade: 45;
-    Name: Project       ,  Weight: 10;
-    Name: Quiz          ,  Weight: 30, Grade: 72;
+    Name: AssignmentOne   ,  Weight: 10, Grade: 65;
+    Name: AssignmentTwo   ,  Weight: 10, Grade: 86;
+    Name: AssignmentThree ,  Weight: 10, Grade: 73;
+    Name: Midterm       ,  Weight: 20, Grade: 85;
     Name: Final         ,  Weight: 50;
 )
 
-CREATE GROUP term1(
-    Name: Cpsc410;
+CREATE COURSE cpsc430(
+    Name: EssayOne    ,  Weight: 1, Grade: 55;
+    Name: EssayTwo    ,  Weight: 2, Grade: 63;
+    Name: EssayThree  ,  Weight: 4, Grade: 67;
+    Name: EssayFour   ,  Weight: 8, Grade: 56;
+    Name: EssayFive   ,  Weight: 10, Grade: 71;
+    Name: Labs        ,  Weight: 25;
+    Name: Final       ,  Weight: 50;
 )
 
-COMPUTE AVG cpsc410()
+CREATE GROUP term1(
+    Name: cpsc410;
+    Name: cpsc430;
+)
 
-COMPUTE GOAL cpsc410(
-    Mark: 90;
+COMPUTE AVG term1()
+
+COMPUTE GOAL cpsc430(
+    Mark: 85;
 )
