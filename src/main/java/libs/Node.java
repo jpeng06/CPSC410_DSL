@@ -17,6 +17,7 @@ public abstract class Node {
         scope.addFirst(s);
     }
     public static void leaveScope(){
+        System.out.println("Leaving scope " + getScope());
         scope.removeFirst();
     }
     public static String getScope(){

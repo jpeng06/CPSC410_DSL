@@ -1,6 +1,7 @@
 package ui;
 
 import ast.PROGRAM;
+import libs.HtmlOutputter;
 import libs.Tokenizer;
 
 import java.io.FileNotFoundException;
@@ -17,6 +18,8 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
         List<String> literals = Arrays.asList("CREATE", "COMPUTE", "COURSE", "GROUP", "AVG", "GOAL", "Name", "Weight", "Mark", "(", ")", ":", ",", ";");
         Tokenizer.makeTokenizer("input.tvar",literals);
+        HtmlOutputter.writeToFile("scripts.js", "", false);
+        HtmlOutputter.writeToFile("mygrades.html", "", false);
         PROGRAM p = new PROGRAM();
         p.parse();
         p.evaluate();

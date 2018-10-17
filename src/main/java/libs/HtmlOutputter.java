@@ -7,9 +7,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class HtmlOutputter {
-    public static void writeToHtmlFile(String s, boolean isAppendMode) {
+    public static void writeToFile(String file, String s, boolean isAppendMode) {
         try {
-            FileWriter fstream = new FileWriter("mygrades.html", isAppendMode);
+            FileWriter fstream = new FileWriter(file, isAppendMode);
             BufferedWriter out = new BufferedWriter(fstream);
             out.write(s);
             out.close();

@@ -1,15 +1,27 @@
 CREATE COURSE cpsc410(
-    Name: Assignment    ,  Weight: 10, Grade: 45;
+    Name: Assignment    ,  Weight: 10, Grade: 80;
     Name: Project       ,  Weight: 10;
-    Name: Quiz          ,  Weight: 30, Grade: 72;
+    Name: Quiz          ,  Weight: 30, Grade: 85;
+    Name: Final         ,  Weight: 50;
+)
+
+CREATE COURSE cpsc430(
+    Name: Assignment    ,  Weight: 10, Grade: 50;
+    Name: Project       ,  Weight: 10;
+    Name: Quiz          ,  Weight: 30, Grade: 70;
     Name: Final         ,  Weight: 50;
 )
 
 CREATE GROUP term1(
-    Name: Cpsc410;
+    Name: cpsc410;
+    Name: cpsc430;
 )
 
 COMPUTE AVG cpsc410()
+
+COMPUTE AVG cpsc430()
+
+COMPUTE AVG term1()
 
 COMPUTE GOAL cpsc410(
     Mark: 90;
